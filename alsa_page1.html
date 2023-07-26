@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden">
 
 <head>
     <meta charset="UTF-8">
@@ -8,66 +8,110 @@
 
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'
         integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD' crossorigin='anonymous'>
-    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v6.3.0/css/all.css'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css' />
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js'
         integrity='sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN'
         crossorigin='anonymous'></script>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Oswald&display=swap" rel="stylesheet">
 </head>
+
+<style type="text/css">
+    .bg-dark-blue {
+        background-color: #0E5192 !important;
+    }
+
+    .bg-clear-blue {
+        background-color: #529ED0 !important;
+    }
+
+    .btn-darkness-blue {
+        background-color: #2a3675 !important;
+    }
+
+    .text-darkness-blue {
+        color: #2A3675;
+    }
+
+    #staticBackdrop button:hover,
+    #section-search button:hover  {
+        background-color: #529ED0 !important;
+    }
+
+    #section-categories .icon-bg {
+        height: 85px;
+        width: 60px;
+    }
+
+    #section-search p,
+    #section-search .btn,
+    #section-categories h5,
+    #staticBackdrop p {
+        font-family: 'Barlow Condensed', sans-serif;
+    }
+
+    #section-search h2,
+    #section-categories h2 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 38px;
+    }
+
+    #staticBackdrop .modal-dialog {
+        top: 30%;
+    }
+</style>
 
 <body>
     <section id="section-search">
         <div class="container-fluid">
             <div class="row">
-                <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
-                    <div class="container-fluid align-items-md-stretch flex-md-column">
-                        <div class="block-text">
-                            <div class="d-flex">
-                        <h2 class="text-white fs-3">KNOW WHAT YOU NEED?</h2>
-                        <p class="text-white d-none d-md-block mb-0 ps-md-5">Search by Keyword</p>
-                    </div>
-                        <p class="text-white d-none d-md-block">Enter a keyword to access resources in your local area.</p>
-                    </div>
+
+                <nav class="navbar navbar-expand-md navbar-dark bg-dark-blue py-3" aria-label="Fourth navbar example">
+                    <div class="container-fluid">
+                        <h2 class="text-white fw-bolder pb-3 pb-md-3">KNOW WHAT YOU NEED?</h2>
+                        <p class="text-white d-none d-md-block fs-4 ps-md-5">Search by Keyword</p>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false"
                             aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
 
-                        <div class="collapse navbar-collapse" id="navbarsExample04">
-                            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                                <li class="nav-item">
-                                    <label for="address" class="form-label">Address</label>
-                                    <input type="text" class="form-control" id="address" placeholder="Enter address">
-                                </li>
-                                <li class="nav-item">
-                                    <label for="city" class="form-label">City</label>
-                                    <input type="text" class="form-control" id="city" placeholder="Enter city">
-                                </li>
-                                <li class="nav-item">
-                                    <label for="state" class="form-label">State</label>
-                                    <input type="text" class="form-control" id="state" placeholder="Enter state">
-                                </li>
-                                <li class="nav-item">
-                                    <label for="zip" class="form-label">Zip Code</label>
-                                    <input type="text" class="form-control" id="zip" placeholder="Enter zip code">
-                                </li>
-                                <li class="nav-item">
-                                    <label for="keywords" class="form-label">Keywords</label>
-                                    <input type="text" class="form-control" id="keywords" placeholder="Enter keywords">
-                                </li>
-                                <li class="nav-item">
-                                    <label for="radius" class="form-label">Radius</label>
-                                    <input type="text" class="form-control" id="radius" placeholder="Enter radius">
-                                </li>
-                                <li class="nav-item">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                </li>
-                            </ul>
+                        <div class="collapse navbar-collapse d-md-flex flex-md-column align-items-md-end"
+                            id="navbarsExample04">
+                            <div class="key-block ps-md-5 w-100">
+                                <p class="text-white d-block d-md-none fs-4 pt-4 pt-md-0 ps-md-5">Search by Keyword</p>
+                                <p class="text-white">Enter a keyword to access resources in your
+                                    local
+                                    area.</p>
+                                <ul class="navbar-nav mb-2 mb-md-0">
+                                    <li class="nav-item w-100 pb-4 pb-md-0 me-md-4">
+                                        <input type="text" class="form-control px-5" id="address"
+                                            placeholder="Enter address">
+                                    </li>
+                                    <li class="nav-item w-100 pb-4 pb-md-0 me-md-4">
+                                        <select class="form-select px-5" aria-label="Default select example">
+                                            <option selected>Select radius</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </li>
+                                    <li class="nav-item d-flex flex-column justify-content-end">
+                                        <button type="submit"
+                                            class="btn btn-darkness-blue text-white d-flex justify-content-center fw-bold px-5">GO<i
+                                                class="fa-solid fa-chevron-right my-auto m-md-auto ps-2"></i></button>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </nav>
+
             </div>
         </div>
     </section>
@@ -75,12 +119,107 @@
     <section id="section-categories">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 pb-4 pb-md-0">
+                    <h2 class=" py-4 text-darkness-blue text-center">Find by categories</h2>
 
+                    <div class="row row-cols-1 row-cols-md-4 g-4">
+                        <div class="col" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <div class="d-flex h-100 border border-1">
+                                <div class="icon-bg bg-dark-blue d-flex justify-content-center align-items-center">
+                                    <i class="fa-solid fa-vial-circle-check fa-2xl text-white"></i>
+                                </div>
+                                <h5 class="fs-2 m-auto">Category 1</h5>
+                            </div>
+                        </div>
+                        <div class="col" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <div class="d-flex h-100 border border-1">
+                                <div class="icon-bg bg-dark-blue d-flex justify-content-center align-items-center">
+                                    <i class="fa-solid fa-vest fa-2xl text-white"></i>
+                                </div>
+                                <h5 class="fs-2 m-auto">Category 2</h5>
+                            </div>
+                        </div>
+                        <div class="col" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <div class="d-flex h-100 border border-1">
+                                <div class="icon-bg bg-dark-blue d-flex justify-content-center align-items-center">
+                                    <i class="fa-solid fa-location-dot fa-2xl text-white"></i>
+                                </div>
+                                <h5 class="fs-2 m-auto">Category 3</h5>
+                            </div>
+                        </div>
+                        <div class="col" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <div class="d-flex h-100 border border-1">
+                                <div class="icon-bg bg-dark-blue d-flex justify-content-center align-items-center">
+                                    <i class="fa-solid fa-plane fa-2xl text-white"></i>
+                                </div>
+                                <h5 class="fs-2 m-auto">Category 4</h5>
+                            </div>
+                        </div>
+                        <div class="col" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <div class="d-flex h-100 border border-1">
+                                <div class="icon-bg bg-clear-blue d-flex justify-content-center align-items-center">
+                                    <i class="fa-solid fa-microscope fa-2xl text-white"></i>
+                                </div>
+                                <h5 class="fs-2 m-auto">Category 5</h5>
+                            </div>
+                        </div>
+                        <div class="col" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <div class="d-flex h-100 border border-1">
+                                <div class="icon-bg bg-clear-blue d-flex justify-content-center align-items-center">
+                                    <i class="fa-solid fa-map-location-dot fa-2xl text-white"></i>
+                                </div>
+                                <h5 class="fs-2 m-auto">Category 6</h5>
+                            </div>
+                        </div>
+                        <div class="col" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <div class="d-flex h-100 border border-1">
+                                <div class="icon-bg bg-clear-blue d-flex justify-content-center align-items-center">
+                                    <i class="fa-solid fa-person-circle-question fa-2xl text-white"></i>
+                                </div>
+                                <h5 class="fs-2 m-auto">Category 7</h5>
+                            </div>
+                        </div>
+                        <div class="col" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <div class="d-flex h-100 border border-1">
+                                <div class="icon-bg bg-clear-blue d-flex justify-content-center align-items-center">
+                                    <i class="fa-solid fa-house-medical-circle-xmark fa-2xl text-white"></i>
+                                </div>
+                                <h5 class="fs-2 m-auto">Category 8</h5>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 </body>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content rounded-0 bg-clear-blue">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="text-white fs-5">Enter a zip code, county, or 'statewide' to find resources.</p>
+                <div class="d-flex">
+                    <input type="text" placeholder="ZIP or county" class="form-control me-2 px-5" name="zipCode"
+                        title="ZIP or county" alt="ZIP or county" autocomplete="off">
+                        <select class="form-select pe-0" aria-label="Default select example">
+                            <option selected>Select radius</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    <button type="submit"
+                        class="btn btn-darkness-blue text-white d-flex justify-content-center fw-bold ms-2 px-3">GO<i
+                            class="fa-solid fa-chevron-right my-auto m-md-auto ps-2"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 </html>
