@@ -68,6 +68,29 @@
     <section id="section-result">
         <div class="container-fluid">
             <div class="row">
+                <div class="col-12 px-0">
+                    <div class="d-md-flex py-4 mb-3 bg-dark-blue">
+                        <div class="mx-3">
+                            <input type="text" class="form-control zip-code-field" id="zipCode" placeholder="Enter zip code" maxlength="5"
+                                pattern="\d{1,5}">
+                        </div>
+                        <div class="mx-3 mx-md-0 my-3 my-md-0">
+                            <input type="text" class="form-control keyword-field" id="keywords" placeholder="Enter keywords">
+                        </div>
+                        <!-- <select class="form-select pe-0" aria-label="Default select example">
+                                            <option selected>Select radius</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select> -->
+                        <button type="submit" onclick="validateForm()"
+                            class="btn btn-darkness-blue text-white d-flex justify-content-center fw-bold ms-3 ms-md-2 px-3">GO<i
+                                class="fa-solid fa-chevron-right my-auto m-md-auto ps-2"></i></button>
+                    </div>
+                    <div class="error-message" style="display: none; color: white; background-color: red; padding: 5px;">
+                        Please fill in all required fields.
+                    </div>
+                </div>
                 <div class="col-12 col-md-8">
                     <div class="banner-result  bg-clear-blue d-flex justify-content-between px-3 py-2">
                         <div class="form-check my-auto">
@@ -124,30 +147,36 @@
                     <div class="block-result d-flex px-3 my-4 py-3 bg-light border border-2">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                         <div class="block-text ps-2">
-                            <p class="mb-1"><span class="pe-2 fs-5">1.</span><a href="#" class="text-dark-blue fw-semibold fs-5">This is the first result</p></a>
+                            <p class="mb-1"><span class="pe-2 fs-6">1.</span><a href="#" class="text-dark-blue fw-semibold fs-5">Disaster Prepardness/Relief</p></a>
                             <div class="result ps-5">
-                                <p class="mb-1"><b>Agency Information Agency Number:</b> <span>STAN3340</span></p>
-                                <p class="mb-1"><b>Name:</b> <span>STAN3340</span></p>
-                                <p class="mb-1"><b>Listing Details - Site Location Address:</b> <span>500 South Wayne Avenue
-                                        Waynesboro VA 22980</span></p>
-                                <p class="mb-1"><b>Phone:</b> <span>(540)942-8648</span></p>
-                                <p class="mb-1"><b>Fax:</b> <span>(540)942-8648</span></p>
-                                <p class="mb-1"><b>Where Service is Provided:</b> <span>On site</span></p>
+                                <p class="mb-1"><b>Organization/Vendor Name:</b> <span>HealthCare Ready</span></p>
+                                <p class="mb-1"><b>Full Address:</b> <span>1325 G St NW, Suite 500</span></p>
+                                <p class="mb-1"><b>Phone Number:</b> <span>1-866-247-2694</span></p>
+                                <p class="mb-1"><b>General Email:</b> <span>ContactUs@HealthcareReady.org</span></p>
+                                <p class="mb-1"><b>Website:</b> <span>https://healthcareready.org/</span></p>
+                                <p class="mb-1"><b>Website Locator Page:</b> <span></span></p>
+                                <p class="mb-1"><b>Notes:</b> <span>Healthcare Ready is a nonprofit that works to ensure patient access to healthcare, including medicines, during times of disaster. Healthcare Ready has activated its virtual Emergency Operations Center to support healthcare and public health response operations.</span></p>
+                                <p class="mb-1"><b>Source (Internal /External)</b> <span>External Resource</span></p>
+                                <p class="mb-1"><b>Service Area:</b> <span></span></p>
+                                <p class="mb-1"><b>Last Updated:</b> <span>04/24/2023</span></p>
                             </div>
                         </div>
                     </div>
                     <div class="block-result d-flex px-3 my-4 py-3 bg-light border border-2">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                         <div class="block-text ps-2">
-                            <p class="mb-1"><span class="pe-2 fs-5">2.</span><a href="#" class="text-dark-blue fw-semibold fs-5">This is the second result</p></a>
+                            <p class="mb-1"><span class="pe-2 fs-6">2.</span><a href="#" class="text-dark-blue fw-semibold fs-5">Disaster Preparedness/Relief</p></a>
                             <div class="result ps-5">
-                                <p class="mb-1"><b>Agency Information Agency Number:</b> <span>STAN3340</span></p>
-                                <p class="mb-1"><b>Name:</b> <span>STAN3340</span></p>
-                                <p class="mb-1"><b>Listing Details - Site Location Address:</b> <span>500 South Wayne Avenue
-                                        Waynesboro VA 22980</span></p>
-                                <p class="mb-1"><b>Phone:</b> <span>(540)942-8648</span></p>
-                                <p class="mb-1"><b>Fax:</b> <span>(540)942-8648</span></p>
-                                <p class="mb-1"><b>Where Service is Provided:</b> <span>On site</span></p>
+                                <p class="mb-1"><b>Organization/Vendor Name:</b><span>American Red Cross</span></p>
+                                <p class="mb-1"><b>Full Address:</b> <span></span></p>
+                                <p class="mb-1"><b>Phone Number:</b> <span>1-800-733-2767</span></p>
+                                <p class="mb-1"><b>General Email:</b> <span></span></p>
+                                <p class="mb-1"><b>Website:</b> <span>https://www.redcross.org/</span></p>
+                                <p class="mb-1"><b>Website Locator Page:</b> <span>https://www.redcross.org/find-your-local-chapter.html</span></p>
+                                <p class="mb-1"><b>Notes:</b> <span></span></p>
+                                <p class="mb-1"><b>Source (Internal /External)</b> <span>External Resource</span></p>
+                                <p class="mb-1"><b>Service Area:</b> <span></span></p>
+                                <p class="mb-1"><b>Last Updated:</b> <span>07/03/2023</span></p>
                             </div>
                         </div>
                     </div>
@@ -159,159 +188,90 @@
                     <div class="container-md">
                         <div class="links-order">
                             <div class="banner-order bg-clear-blue ps-3 py-2">
-                                <h2 class="text-white">Order by links</h2>
+                                <h2 class="text-white fs-5">Sort options</h2>
                             </div>
                         </div>
                     </div>
                     <div class="container-md">
                         <div class="links-block bg-light d-flex flex-column py-2 ps-4 ps-md-5">
-                            <a href="#" class="text-dark-blue fw-bolder pb-2">Link 1</a>
-                            <a href="#" class="text-dark-blue fw-bolder pb-2">Link 2</a>
-                            <a href="#" class="text-dark-blue fw-bolder pb-2">Link 3</a>
-                            <a href="#" class="text-dark-blue fw-bolder pb-2">Link 4</a>
-                            <a href="#" class="text-dark-blue fw-bolder pb-2">Link 5</a>
-                            <a href="#" class="text-dark-blue fw-bolder pb-2">Link 6</a>
-                            <a href="#" class="text-dark-blue fw-bolder pb-2">Link 7</a>
+                            <a href="#" class="text-dark-blue fw-bolder pb-2">Distance</a>
+                            <a href="#" class="text-dark-blue fw-bolder pb-2">Organization/Vendor Name</a>
                         </div>
                     </div>
                     <div class="container-md">
                         <div class="links-order pt-3">
                             <div class="banner-order bg-clear-blue ps-3 py-2">
-                                <h2 class="text-white">Filter results</h2>
+                                <h2 class="text-white fs-5">Filter by</h2>
                             </div>
                         </div>
                     </div>
                     <div class="container-md">
-                        <div class="check-box ps-4 ps-md-5 bg-light">
-                            <h3 class="text-darkness-blue pt-3">Cities</h3>
+                        <div class="check-box py-2 ps-4 ps-md-5 bg-light">
+                            <h6 class="text-darkness-blue pt-3">Service Area</h6>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                 <label class="form-check-label text-dark-blue" for="flexCheckDefault">
-                                    Richmond(<span>6</span>)
+                                    Nationwide (<span>6</span>)
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                 <label class="form-check-label text-dark-blue" for="flexCheckDefault">
-                                    Roanoke(<span>5</span>)
+                                    Region (<span>5</span>)
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                 <label class="form-check-label text-dark-blue" for="flexCheckDefault">
-                                    Abingdon(<span>3</span>)
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label text-dark-blue" for="flexCheckDefault">
-                                    Hampton(<span>2</span>)
-                                </label>
-                            </div>
-                            <div class="form-check pb-4">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label text-dark-blue" for="flexCheckDefault">
-                                    Michigan(<span>1</span>)
+                                    State/Local (<span>3</span>)
                                 </label>
                             </div>
                         </div>
-                        <div class="check-box ps-4 ps-md-5 bg-light">
-                            <h3 class="text-darkness-blue pt-3">Zip</h3>
+                        <div class="check-box py-2 ps-4 ps-md-5 bg-light">
+                            <h6 class="text-darkness-blue pt-3">Source</h6>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                 <label class="form-check-label text-dark-blue" for="flexCheckDefault">
-                                    23219(<span>5</span>)
+                                    Internal (<span>5</span>)
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                 <label class="form-check-label text-dark-blue" for="flexCheckDefault">
-                                    24011(<span>4</span>)
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label text-dark-blue" for="flexCheckDefault">
-                                    24212(<span>4</span>)
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label text-dark-blue" for="flexCheckDefault">
-                                    05601(<span>3</span>)
-                                </label>
-                            </div>
-                            <div class="form-check pb-4">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label text-dark-blue" for="flexCheckDefault">
-                                    971137(<span>1</span>)
+                                    External (<span>4</span>)
                                 </label>
                             </div>
                         </div>
-                        <div class="check-box ps-4 ps-md-5 bg-light">
-                            <h3 class="text-darkness-blue pt-3">Where Service Provided
-                            </h3>
+                        <div class="check-box py-2 ps-4 ps-md-5 bg-light">
+                            <h6 class="text-darkness-blue pt-3">Keywords</h6>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                 <label class="form-check-label text-dark-blue" for="flexCheckDefault">
-                                    On Site(<span>26</span>)
+                                    On Site (<span>26</span>)
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                 <label class="form-check-label text-dark-blue" for="flexCheckDefault">
-                                    Telephone(<span>4</span>)
+                                    Telephone (<span>4</span>)
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                 <label class="form-check-label text-dark-blue" for="flexCheckDefault">
-                                    Website(<span>3</span>)
+                                    Website (<span>3</span>)
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                 <label class="form-check-label text-dark-blue" for="flexCheckDefault">
-                                    App(<span>2</span>)
+                                    App (<span>2</span>)
                                 </label>
                             </div>
                             <div class="form-check pb-4">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                 <label class="form-check-label text-dark-blue" for="flexCheckDefault">
-                                    Fax(<span>1</span>)
-                                </label>
-                            </div>
-                        </div>
-                        <div class="check-box ps-4 ps-md-5 bg-light pt-3">
-                            <h3 class="text-darkness-blue">The programs searched also offer</h3>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label text-dark-blue" for="flexCheckDefault">
-                                    Artist Services(<span>15</span>)
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label text-dark-blue" for="flexCheckDefault">
-                                    Performing Arts Facilities(<span>12</span>)
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label text-dark-blue" for="flexCheckDefault">
-                                    Museums(<span>6</span>)
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label text-dark-blue" for="flexCheckDefault">
-                                    Recreational/Leisure/Arts Instruction(<span>6</span>)
-                                </label>
-                            </div>
-                            <div class="form-check pb-4">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label text-dark-blue" for="flexCheckDefault">
-                                    Museums(<span>1</span>)
+                                    Fax (<span>1</span>)
                                 </label>
                             </div>
                         </div>
@@ -324,4 +284,21 @@
 
 </body>
 
+<script>
+    function validateForm() {
+    const addressInput = document.querySelector(".keyword-field");
+    const zipCodeInput = document.querySelector(".zip-code-field");
+    const errorMessage = document.querySelector(".error-message");
+
+    const addressValue = addressInput.value.trim();
+    const zipCodeValue = zipCodeInput.value.trim();
+
+    if (addressValue === "" || zipCodeValue === "") {
+        errorMessage.style.display = "block";
+    } else {
+        errorMessage.style.display = "none";
+        // Do something else when the form is valid, e.g., submit the form.
+    }
+}
+</script>
 </html>
