@@ -22,29 +22,33 @@
                         <h1>Week ending 9/6/2023</h1>
                     </div>
                 </div>
-                <div class="row d-md-flex">
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Priority
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-dark">
-                          <li><a class="dropdown-item active" href="#">HI</a></li>
-                          <li><a class="dropdown-item" href="#">MED</a></li>
-                          <li><a class="dropdown-item" href="#">LOW</a></li>
-                          <li><a class="dropdown-item" href="#">N4P</a></li>
-                          <li><a class="dropdown-item" href="#">R4P</a></li>
-                          <li><a class="dropdown-item" href="#">W4R</a></li>
-                        </ul>
-                      </div>
-                      <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Week
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-dark">
-                          <li><a class="dropdown-item active" href="#">This Week</a></li>
-                          <li><a class="dropdown-item" href="#">Last Week</a></li>
-                        </ul>
-                      </div>
+                <div class="row">
+                    <div class="dropdown-group d-md-flex">
+                        <div class="dropdown me-md-5">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Priority
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item active" href="#">HI</a></li>
+                                <li><a class="dropdown-item" href="#">MED</a></li>
+                                <li><a class="dropdown-item" href="#">LOW</a></li>
+                                <li><a class="dropdown-item" href="#">N4P</a></li>
+                                <li><a class="dropdown-item" href="#">R4P</a></li>
+                                <li><a class="dropdown-item" href="#">W4R</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Week
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item active" href="#">This Week</a></li>
+                                <li><a class="dropdown-item" href="#">Last Week</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -95,12 +99,70 @@
                             <tbody>
                                 <tr>
                                     <td rowspan="3">Task 1</td>
-                                    <td>8</td>
+                                    <td colspan="7">
+                                        <div class="field">
+                                        <label for="basic-url" class="form-label">Time To Enter</label>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Time To Enter"
+                                                aria-label="time to enter" aria-describedby="basic-addon1">
+                                        </div>
+                                    </td>
                                 </tr>
-                                <!-- <tr>
-                                    <td>7</td>
-                                </tr> -->
+                                <tr>
+                                    <td colspan="3">
+                                        <div class="field">
+                                            <label for="basic-url" class="form-label">Start Time</label>
+                                            <div class="input-group mb-3">
+                                                <input type="time" class="form-control" placeholder="Time To Enter"
+                                                    aria-label="time to enter" aria-describedby="basic-addon1" step="60">
+                                            </div>
+                                    </div>
+                                </td>
+                                    <td colspan="3">
+                                        <div class="field">
+                                        <label for="basic-url" class="form-label">End Time</label>
+                                        <div class="input-group mb-3">
+                                            <input type="time" class="form-control" placeholder="Time To Enter"
+                                                aria-label="time to enter" aria-describedby="basic-addon1" step="60">
+                                        </div>
+                                    </div>
+                                    </td>
+                                </tr>
                             </tbody>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="3">Task 2</td>
+                                    <td colspan="7">
+                                        <div class="field">
+                                        <label for="basic-url" class="form-label">Time To Enter</label>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Time To Enter"
+                                                aria-label="time to enter" aria-describedby="basic-addon1">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <div class="field">
+                                            <label for="basic-url" class="form-label">Start Time</label>
+                                            <div class="input-group mb-3">
+                                                <input type="time" class="form-control" placeholder="Time To Enter"
+                                                    aria-label="time to enter" aria-describedby="basic-addon1" step="60">
+                                            </div>
+                                    </div>
+                                </td>
+                                    <td colspan="3">
+                                        <div class="field">
+                                        <label for="basic-url" class="form-label">End Time</label>
+                                        <div class="input-group mb-3">
+                                            <input type="time" class="form-control" placeholder="Time To Enter"
+                                                aria-label="time to enter" aria-describedby="basic-addon1" step="60">
+                                        </div>
+                                    </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+
                         </table>
                     </div>
                 </div>
