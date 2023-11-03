@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./assets/scss/styles.css">
+    <title>NIFTIT HomePage</title>
+
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v6.3.0/css/all.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css' />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script type="text/javascript"
+        src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js'></script>
+</head>
+<style type="text/css">
+    #section-services .newsCard {
+        position: relative;
+        height: 310px;
+        margin: 5rem auto;
+        background-color: #fff;
+        color: #fff;
+        overflow: hidden;
+    }
+
+    #section-services .newsCaption {
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        opacity: .6;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #222225;
+        padding: 15px;
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transition: opacity 0.1s 0.3s, -webkit-transform 0.4s;
+        transition: opacity 0.1s 0.3s, -webkit-transform 0.4s;
+        transition: transform 0.4s, opacity 0.1s 0.3s;
+        transition: transform 0.4s, opacity 0.1s 0.3s, -webkit-transform 0.4s;
+    }
+
+    #section-services .newsCaption-title {
+        margin-top: 0px;
+    }
+
+    #section-services .newsCaption-content {
+        margin: 0;
+    }
+
+    #section-services .newsCaption-link {
+        color: #fff;
+        text-decoration: underline;
+        opacity: .8;
+        -webkit-transition-property: opacity;
+        transition-property: opacity;
+        -webkit-transition-duration: 0.15s;
+        transition-duration: 0.15s;
+        -webkit-transition-timing-function: cubic-bezier(0.39, 0.58, 0.57, 1);
+        transition-timing-function: cubic-bezier(0.39, 0.58, 0.57, 1);
+    }
+
+    #section-services .newsCaption-link:hover {
+        opacity: 0.65;
+    }
+
+    #section-services .news-Slide-up:hover .newsCaption {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        -webkit-transition: opacity 0.1s, -webkit-transform 0.4s;
+        transition: opacity 0.1s, -webkit-transform 0.4s;
+        transition: transform 0.4s, opacity 0.1s;
+        transition: transform 0.4s, opacity 0.1s, -webkit-transform 0.4s;
+    }
+</style>
+
+<body>
+    <section id="section-services">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row row-cols-1 row-cols-md-4">
+                        <div class="col px-0">
+                            <div class='newsCard news-Slide-up'>
+                                 <div class="card h-100 rounded-0 border-top-0 border-bottom-0">
+                                    <div class="card-body d-flex flex-column justify-content-end">
+                                        <div class="image d-flex justify-content-center">
+                                        <img src="./images/digital-video-production.png" width="130" height="130" alt="...">
+                                    </div>
+                                        <h5 class="card-title text-dark text-center mb-4 mt-3">Digital Video Production</h5>
+                                    </div>
+                                </div>
+                                <div class='newsCaption'>
+                                    <h5 class="card-title text-light text-center mb-4 mt-5">Digital Video Production</h5>
+                                    <p class='newsCaption-content text-center'>
+                                        Commercials, corporate videos, cooking videos, interviews, testimonials and case studies are a few of our specialities. We’ll help with creative direction, strategy and all stages of production.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col px-0">
+                            <div class='newsCard news-Slide-up'>
+                                 <div class="card h-100 rounded-0 border-top-0 border-bottom-0">
+                                    <div class="card-body d-flex flex-column justify-content-end">
+                                        <div class="image d-flex justify-content-center">
+                                        <img src="./images/digital-video-production.png" width="130" height="130" alt="...">
+                                    </div>
+                                        <h5 class="card-title text-dark text-center mb-4 mt-3">Experiential Marketing</h5>
+                                    </div>
+                                </div>
+                                <div class='newsCaption'>
+                                    <h5 class="card-title text-light text-center mb-4 mt-5">Experiential Marketing</h5>
+                                    <p class='newsCaption-content text-center'>
+                                        Whether you’re interested in brand installations, guerrilla marketing tactics, pop-up shops or experiential launch events, we’ll ensure your clients have a positive, memorable experience with your brand.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col px-0">
+                            <div class='newsCard news-Slide-up'>
+                                 <div class="card h-100 rounded-0 border-top-0 border-bottom-0">
+                                    <div class="card-body d-flex flex-column justify-content-end">
+                                        <div class="image d-flex justify-content-center">
+                                        <img src="./images/digital-video-production.png" width="130" height="130" alt="...">
+                                    </div>
+                                        <h5 class="card-title text-dark text-center mb-4 mt-3">Social Media Management</h5>
+                                    </div>
+                                </div>
+                                <div class='newsCaption'>
+                                    <h5 class="card-title text-light text-center mb-4 mt-5">Social Media Management</h5>
+                                    <p class='newsCaption-content text-center'>
+                                        Want to stand out on Twitter, Instagram, Facebook, Snapchat and whatever other platforms your customers spend time in? We’ve got you covered with production, monitoring and optimization of posts.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col px-0">
+                            <div class='newsCard news-Slide-up'>
+                                 <div class="card h-100 rounded-0 border-top-0 border-bottom-0">
+                                    <div class="card-body d-flex flex-column justify-content-end">
+                                        <div class="image d-flex justify-content-center">
+                                        <img src="./images/digital-video-production.png" width="130" height="130" alt="...">
+                                    </div>
+                                        <h5 class="card-title text-dark text-center mb-4 mt-3">Content Marketing</h5>
+                                    </div>
+                                </div>
+                                <div class='newsCaption'>
+                                    <h5 class="card-title text-light text-center mb-4 mt-5">Content Marketing</h5>
+                                    <p class='newsCaption-content text-center'>
+                                        For any and all online marketing content, Rockne will produce creative materials that will generate the outcomes you’re looking for through strategy, production and promotion.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
