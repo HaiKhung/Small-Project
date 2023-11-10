@@ -13,19 +13,31 @@
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'>
 </head>
 
+<style type="text/css">
+    #section-tabs table {
+        border: 2px solid #C0C0C0;
+    }
+
+    #section-tabs td,
+    #section-tabs th {
+        border: 1px solid #C0C0C0;
+        background-color: #E5E4E2;
+    }
+</style>
+
 <body>
     <section id="section-banner">
-        <div class="container-fluid">
+        <div class="container-fluid bg-dark pb-3 pt-2">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1>Week ending 9/6/2023</h1>
+                        <h1 class="text-light">Week ending 9/6/2023</h1>
                     </div>
                 </div>
                 <div class="row">
                     <div class="dropdown-group d-md-flex">
                         <div class="dropdown me-md-5">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            <button class="btn btn-secondary dropdown-toggle px-4" type="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Priority
                             </button>
@@ -39,7 +51,7 @@
                             </ul>
                         </div>
                         <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            <button class="btn btn-secondary dropdown-toggle px-4" type="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Week
                             </button>
@@ -75,13 +87,69 @@
                             <tbody>
                                 <tr>
                                     <td rowspan="3"></td>
-                                    <td>MM/DD/YYYY</td>
-                                    <td>MM/DD/YYYY</td>
-                                    <td>MM/DD/YYYY</td>
-                                    <td>MM/DD/YYYY</td>
-                                    <td>MM/DD/YYYY</td>
-                                    <td>MM/DD/YYYY</td>
-                                    <td>MM/DD/YYYY</td>
+                                    <td>
+                                        <div class="field">
+                                            <input type="text" class="form-control" id="dateInput"
+                                                placeholder="MM/DD/YYYY"
+                                                pattern="^(0[1-9]|1[0-2])/(0[1-9]|[12][0-9]|3[01])/(19|20)\d{2}$"
+                                                title="Enter a date in the format MM/DD/YYYY"
+                                                oninput="this.value = this.value.replace(/[^0-9/]/g, '')">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="field">
+                                            <input type="text" class="form-control" id="dateInput"
+                                                placeholder="MM/DD/YYYY"
+                                                pattern="^(0[1-9]|1[0-2])/(0[1-9]|[12][0-9]|3[01])/(19|20)\d{2}$"
+                                                title="Enter a date in the format MM/DD/YYYY"
+                                                oninput="this.value = this.value.replace(/[^0-9/]/g, '')">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="field">
+                                            <input type="text" class="form-control" id="dateInput"
+                                                placeholder="MM/DD/YYYY"
+                                                pattern="^(0[1-9]|1[0-2])/(0[1-9]|[12][0-9]|3[01])/(19|20)\d{2}$"
+                                                title="Enter a date in the format MM/DD/YYYY"
+                                                oninput="this.value = this.value.replace(/[^0-9/]/g, '')">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="field">
+                                            <input type="text" class="form-control" id="dateInput"
+                                                placeholder="MM/DD/YYYY"
+                                                pattern="^(0[1-9]|1[0-2])/(0[1-9]|[12][0-9]|3[01])/(19|20)\d{2}$"
+                                                title="Enter a date in the format MM/DD/YYYY"
+                                                oninput="this.value = this.value.replace(/[^0-9/]/g, '')">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="field">
+                                            <input type="text" class="form-control" id="dateInput"
+                                                placeholder="MM/DD/YYYY"
+                                                pattern="^(0[1-9]|1[0-2])/(0[1-9]|[12][0-9]|3[01])/(19|20)\d{2}$"
+                                                title="Enter a date in the format MM/DD/YYYY"
+                                                oninput="this.value = this.value.replace(/[^0-9/]/g, '')">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="field">
+                                            <input type="text" class="form-control" id="dateInput"
+                                                placeholder="MM/DD/YYYY"
+                                                pattern="^(0[1-9]|1[0-2])/(0[1-9]|[12][0-9]|3[01])/(19|20)\d{2}$"
+                                                title="Enter a date in the format MM/DD/YYYY"
+                                                oninput="this.value = this.value.replace(/[^0-9/]/g, '')">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="field">
+                                            <input type="text" class="form-control" id="dateInput"
+                                                placeholder="MM/DD/YYYY"
+                                                pattern="^(0[1-9]|1[0-2])/(0[1-9]|[12][0-9]|3[01])/(19|20)\d{2}$"
+                                                title="Enter a date in the format MM/DD/YYYY"
+                                                oninput="this.value = this.value.replace(/[^0-9/]/g, '')">
+                                        </div>
+                                    </td>
                                 </tr>
                             </tbody>
                             <tbody>
@@ -101,10 +169,11 @@
                                     <td rowspan="3">Task 1</td>
                                     <td colspan="7">
                                         <div class="field">
-                                        <label for="basic-url" class="form-label">Time To Enter</label>
-                                        <div class="input-group mb-3">
-                                            <input type="text" class="form-control" placeholder="Time To Enter"
-                                                aria-label="time to enter" aria-describedby="basic-addon1">
+                                            <label for="basic-url" class="form-label">Time To Enter</label>
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" placeholder="Time To Enter"
+                                                    aria-label="time to enter" aria-describedby="basic-addon1">
+                                            </div>
                                         </div>
                                     </td>
                                 </tr>
@@ -114,18 +183,21 @@
                                             <label for="basic-url" class="form-label">Start Time</label>
                                             <div class="input-group mb-3">
                                                 <input type="time" class="form-control" placeholder="Time To Enter"
-                                                    aria-label="time to enter" aria-describedby="basic-addon1" step="60">
+                                                    aria-label="time to enter" aria-describedby="basic-addon1"
+                                                    step="60">
                                             </div>
-                                    </div>
-                                </td>
+                                        </div>
+                                    </td>
+                                    <td colspan="1"></td>
                                     <td colspan="3">
                                         <div class="field">
-                                        <label for="basic-url" class="form-label">End Time</label>
-                                        <div class="input-group mb-3">
-                                            <input type="time" class="form-control" placeholder="Time To Enter"
-                                                aria-label="time to enter" aria-describedby="basic-addon1" step="60">
+                                            <label for="basic-url" class="form-label">End Time</label>
+                                            <div class="input-group mb-3">
+                                                <input type="time" class="form-control" placeholder="Time To Enter"
+                                                    aria-label="time to enter" aria-describedby="basic-addon1"
+                                                    step="60">
+                                            </div>
                                         </div>
-                                    </div>
                                     </td>
                                 </tr>
                             </tbody>
@@ -134,11 +206,11 @@
                                     <td rowspan="3">Task 2</td>
                                     <td colspan="7">
                                         <div class="field">
-                                        <label for="basic-url" class="form-label">Time To Enter</label>
-                                        <div class="input-group mb-3">
-                                            <input type="text" class="form-control" placeholder="Time To Enter"
-                                                aria-label="time to enter" aria-describedby="basic-addon1">
-                                        </div>
+                                            <label for="basic-url" class="form-label">Time To Enter</label>
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" placeholder="Time To Enter"
+                                                    aria-label="time to enter" aria-describedby="basic-addon1">
+                                            </div>
                                     </td>
                                 </tr>
                                 <tr>
@@ -147,18 +219,165 @@
                                             <label for="basic-url" class="form-label">Start Time</label>
                                             <div class="input-group mb-3">
                                                 <input type="time" class="form-control" placeholder="Time To Enter"
-                                                    aria-label="time to enter" aria-describedby="basic-addon1" step="60">
+                                                    aria-label="time to enter" aria-describedby="basic-addon1"
+                                                    step="60">
                                             </div>
-                                    </div>
-                                </td>
+                                        </div>
+                                    </td>
+                                    <td colspan="1"></td>
                                     <td colspan="3">
                                         <div class="field">
-                                        <label for="basic-url" class="form-label">End Time</label>
-                                        <div class="input-group mb-3">
-                                            <input type="time" class="form-control" placeholder="Time To Enter"
-                                                aria-label="time to enter" aria-describedby="basic-addon1" step="60">
+                                            <label for="basic-url" class="form-label">End Time</label>
+                                            <div class="input-group mb-3">
+                                                <input type="time" class="form-control" placeholder="Time To Enter"
+                                                    aria-label="time to enter" aria-describedby="basic-addon1"
+                                                    step="60">
+                                            </div>
                                         </div>
-                                    </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="3">Task 3</td>
+                                    <td colspan="7">
+                                        <div class="field">
+                                            <label for="basic-url" class="form-label">Time To Enter</label>
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" placeholder="Time To Enter"
+                                                    aria-label="time to enter" aria-describedby="basic-addon1">
+                                            </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <div class="field">
+                                            <label for="basic-url" class="form-label">Start Time</label>
+                                            <div class="input-group mb-3">
+                                                <input type="time" class="form-control" placeholder="Time To Enter"
+                                                    aria-label="time to enter" aria-describedby="basic-addon1"
+                                                    step="60">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td colspan="1"></td>
+                                    <td colspan="3">
+                                        <div class="field">
+                                            <label for="basic-url" class="form-label">End Time</label>
+                                            <div class="input-group mb-3">
+                                                <input type="time" class="form-control" placeholder="Time To Enter"
+                                                    aria-label="time to enter" aria-describedby="basic-addon1"
+                                                    step="60">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="3">Task 4</td>
+                                    <td colspan="7">
+                                        <div class="field">
+                                            <label for="basic-url" class="form-label">Time To Enter</label>
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" placeholder="Time To Enter"
+                                                    aria-label="time to enter" aria-describedby="basic-addon1">
+                                            </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <div class="field">
+                                            <label for="basic-url" class="form-label">Start Time</label>
+                                            <div class="input-group mb-3">
+                                                <input type="time" class="form-control" placeholder="Time To Enter"
+                                                    aria-label="time to enter" aria-describedby="basic-addon1"
+                                                    step="60">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td colspan="1"></td>
+                                    <td colspan="3">
+                                        <div class="field">
+                                            <label for="basic-url" class="form-label">End Time</label>
+                                            <div class="input-group mb-3">
+                                                <input type="time" class="form-control" placeholder="Time To Enter"
+                                                    aria-label="time to enter" aria-describedby="basic-addon1"
+                                                    step="60">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="3">Task 5</td>
+                                    <td colspan="7">
+                                        <div class="field">
+                                            <label for="basic-url" class="form-label">Time To Enter</label>
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" placeholder="Time To Enter"
+                                                    aria-label="time to enter" aria-describedby="basic-addon1">
+                                            </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <div class="field">
+                                            <label for="basic-url" class="form-label">Start Time</label>
+                                            <div class="input-group mb-3">
+                                                <input type="time" class="form-control" placeholder="Time To Enter"
+                                                    aria-label="time to enter" aria-describedby="basic-addon1"
+                                                    step="60">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td colspan="1"></td>
+                                    <td colspan="3">
+                                        <div class="field">
+                                            <label for="basic-url" class="form-label">End Time</label>
+                                            <div class="input-group mb-3">
+                                                <input type="time" class="form-control" placeholder="Time To Enter"
+                                                    aria-label="time to enter" aria-describedby="basic-addon1"
+                                                    step="60">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="3">Task 6</td>
+                                    <td colspan="7">
+                                        <div class="field">
+                                            <label for="basic-url" class="form-label">Time To Enter</label>
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" placeholder="Time To Enter"
+                                                    aria-label="time to enter" aria-describedby="basic-addon1">
+                                            </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <div class="field">
+                                            <label for="basic-url" class="form-label">Start Time</label>
+                                            <div class="input-group mb-3">
+                                                <input type="time" class="form-control" placeholder="Time To Enter"
+                                                    aria-label="time to enter" aria-describedby="basic-addon1"
+                                                    step="60">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td colspan="1"></td>
+                                    <td colspan="3">
+                                        <div class="field">
+                                            <label for="basic-url" class="form-label">End Time</label>
+                                            <div class="input-group mb-3">
+                                                <input type="time" class="form-control" placeholder="Time To Enter"
+                                                    aria-label="time to enter" aria-describedby="basic-addon1"
+                                                    step="60">
+                                            </div>
+                                        </div>
                                     </td>
                                 </tr>
                             </tbody>
