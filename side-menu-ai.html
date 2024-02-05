@@ -14,11 +14,13 @@
 </head>
 
 <style type="text/css">
-    #side-bar-ai .dropdown-toggle::after {
+    #side-bar-ai .dropdown-toggle::after,
+    #side-bar-ai-mobile .dropdown-toggle::after {
         content: none !important;
     }
 
-    #side-bar-ai .first-button {
+    #side-bar-ai .first-button,
+    #side-bar-ai-mobile .first-button {
         color: #fff !important;
     }
 
@@ -27,7 +29,13 @@
         color: #000;
     }
 
-    #side-bar-ai .button-hovered:hover {
+    #side-bar-ai-mobile .button-dots,
+    #side-bar-ai-mobile .button-archive {
+        color: #212529;
+    }
+
+    #side-bar-ai .button-hovered:hover,
+    #side-bar-ai-mobile .button-hovered:hover {
         color: #fff !important;
         background-color: #202123 !important;
         border: solid 1px #202123 !important;
@@ -35,18 +43,26 @@
     }
 
     #side-bar-ai .button-hovered:hover .button-archive,
+    #side-bar-ai-mobile .button-hovered:hover .button-archive,
+    #side-bar-ai-mobile .button-hovered:hover .button-dots,
     #side-bar-ai .button-hovered:hover .button-dots {
         color: #fff !important;
     }
 
-    #side-bar-ai .dropdown-menu {
+    #side-bar-ai .dropdown-menu, 
+    #side-bar-ai-mobile .dropdown-menu {
         background-color: #202123;
     }
 
-    #side-bar-ai .dropdown-menu button:hover {
+    #side-bar-ai .dropdown-menu button:hover,
+    #side-bar-ai-mobile .dropdown-menu button:hover {
         border: solid #ffff 2px !important;
         border-radius: 6px;
         background-color: unset !important;
+    }
+
+    #side-bar-ai-mobile .offcanvas.offcanvas-start {
+        width: 250px !important;
     }
 </style>
 
@@ -57,7 +73,7 @@
     <main>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-2 bg-black" id="side-bar-ai" style="height: 100vh;">
+                <div class="col-2 bg-black d-none d-md-block" id="side-bar-ai" style="height: 100vh; width: 225px; max-width: 225px; min-width: 225px;">
                     <div class="button-hovered mt-5">
                         <div class="btn-group w-100" role="group" aria-label="Basic example">
                             <button type="button" class="btn first-button rounded-start text-start">search
@@ -138,8 +154,136 @@
                             </button>
                         </div>
                     </div>
-                    <div class="col-10"></div>
                 </div>
+
+                <div id="side-bar-ai-mobile" class="d-block d-md-none">
+                    <nav class="navbar navbar-dark bg-dark fixed-top">
+                        <div class="container-fluid">
+                          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <a class="navbar-brand" href="#">Niftit AI</a>
+                          <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                            <div class="offcanvas-header">
+                              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h5>
+                              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+
+                              <div class="button-hovered mt-5">
+                                <div class="btn-group w-100" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn first-button rounded-start text-start">search
+                                        title</button>
+                                    <button
+                                        class="btn button-dots border-0 dropdown-toggle d-flex px-0 align-items-center justify-content-end rounded-end"
+                                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-three-dots"></i>
+                                    </button>
+        
+                                    <div class="dropdown-menu px-2 start-50 end-0">
+                                        <button class="dropdown-item text-white mb-2" type="button"><i
+                                                class="bi bi-upload pe-3"></i>Share</button>
+                                        <button class="dropdown-item text-white mb-2" type="button"><i
+                                                class="bi bi-pencil pe-3"></i>Rename</button>
+                                        <button class="dropdown-item text-danger mb-2" type="button"><i
+                                                class="bi bi-trash3 pe-3"></i>Delete chat</button>
+                                    </div>
+        
+                                    <button
+                                        class="btn button-archive rounded-0 dropdown-toggle px-0 d-flex justify-content-center align-items-center"
+                                        type="button">
+                                        <i class="bi bi-archive"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="button-hovered">
+                                <div class="btn-group w-100" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn first-button rounded-start text-start">search
+                                        title 2</button>
+                                    <button
+                                        class="btn button-dots border-0 dropdown-toggle d-flex px-0 align-items-center justify-content-end rounded-end"
+                                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-three-dots"></i>
+                                    </button>
+        
+                                    <div class="dropdown-menu px-2 start-50 end-0">
+                                        <button class="dropdown-item text-white mb-2" type="button"><i
+                                                class="bi bi-upload pe-3"></i>Share</button>
+                                        <button class="dropdown-item text-white mb-2" type="button"><i
+                                                class="bi bi-pencil pe-3"></i>Rename</button>
+                                        <button class="dropdown-item text-danger mb-2" type="button"><i
+                                                class="bi bi-trash3 pe-3"></i>Delete chat</button>
+                                    </div>
+        
+                                    <button
+                                        class="btn button-archive rounded-0 dropdown-toggle px-0 d-flex justify-content-center align-items-center"
+                                        type="button">
+                                        <i class="bi bi-archive"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="button-hovered">
+                                <div class="btn-group w-100" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn first-button rounded-start text-start">search
+                                        title 3</button>
+                                    <button
+                                        class="btn button-dots border-0 dropdown-toggle d-flex px-0 align-items-center justify-content-end rounded-end"
+                                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-three-dots"></i>
+                                    </button>
+        
+                                    <div class="dropdown-menu px-2 start-50 end-0">
+                                        <button class="dropdown-item text-white mb-2" type="button"><i
+                                                class="bi bi-upload pe-3"></i>Share</button>
+                                        <button class="dropdown-item text-white mb-2" type="button"><i
+                                                class="bi bi-pencil pe-3"></i>Rename</button>
+                                        <button class="dropdown-item text-danger mb-2" type="button"><i
+                                                class="bi bi-trash3 pe-3"></i>Delete chat</button>
+                                    </div>
+        
+                                    <button
+                                        class="btn button-archive rounded-0 dropdown-toggle px-0 d-flex justify-content-center align-items-center"
+                                        type="button">
+                                        <i class="bi bi-archive"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="button-hovered">
+                                <div class="btn-group w-100" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn first-button rounded-start text-start">search
+                                        title 4</button>
+                                    <button
+                                        class="btn button-dots border-0 dropdown-toggle d-flex px-0 align-items-center justify-content-end rounded-end"
+                                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-three-dots"></i>
+                                    </button>
+        
+                                    <div class="dropdown-menu px-2 start-50 end-0">
+                                        <button class="dropdown-item text-white mb-2" type="button"><i
+                                                class="bi bi-upload pe-3"></i>Share</button>
+                                        <button class="dropdown-item text-white mb-2" type="button"><i
+                                                class="bi bi-pencil pe-3"></i>Rename</button>
+                                        <button class="dropdown-item text-danger mb-2" type="button"><i
+                                                class="bi bi-trash3 pe-3"></i>Delete chat</button>
+                                    </div>
+        
+                                    <button
+                                        class="btn button-archive rounded-0 dropdown-toggle px-0 d-flex justify-content-center align-items-center"
+                                        type="button">
+                                        <i class="bi bi-archive"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            </div>
+                          </div>
+                        </div>
+                      </nav>
+                </div>
+                <div class="col-10"></div>
             </div>
     </main>
     <footer>
