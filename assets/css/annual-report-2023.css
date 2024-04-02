@@ -5237,8 +5237,8 @@ button.swiper-pagination-bullet {
 .asc-impact-sec .impact-show .impact-show-left {
     width: calc(305vw / var(--context));
     position: absolute;
-    left: 8%;
-    top: 15%;
+    /* left: 8%;
+    top: 15%; */
     z-index: 2
 }
 
@@ -5283,7 +5283,7 @@ button.swiper-pagination-bullet {
     }
 
     .asc-impact-sec .impact-show .impact-show-left {
-        top: 15%
+        /* top: 15% */
     }
 
     .asc-impact-sec .impact-show .impact-show-left p a {
