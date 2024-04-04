@@ -37,13 +37,13 @@ body,html {
     -webkit-box-direction: normal
 }
 
-#asc-hero {
+/* #asc-hero {
     background-color: #fff !important;
 }
 
 #asc-hero .hero-content .content-box h2 {
     color: #000;
-}
+} */
 
 * {
     box-sizing: border-box
@@ -2365,7 +2365,7 @@ b,strong {
     width: 100%;
     left: 0;
     top: 0;
-    z-index: 9;
+    z-index: 400;
     -webkit-transition: all .5s;
     transition: all .5s
 }
@@ -2417,7 +2417,7 @@ b,strong {
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
     display: block;
-    z-index: 99
+    z-index: 300;
 }
 
 .site-header .main-navigation::before,.site-header .main-navigation:after {
